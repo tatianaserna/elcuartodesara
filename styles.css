@@ -398,3 +398,104 @@ main {
     width: 100%;
     border-radius: 5px;
 }
+/* ---- ESTILOS GENERALES ---- */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f1e9;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Contenedor principal */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 30px;
+}
+
+/* ---- SECCIÓN DE BIENVENIDA ---- */
+.welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffebcc;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 1000px;
+    width: 100%;
+    gap: 20px;
+}
+
+.welcome-content {
+    flex: 1;
+    text-align: left;
+}
+
+.welcome-image img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* ---- SECCIÓN DE PRODUCTOS ---- */
+.product-gallery {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.products-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+}
+
+.product-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* ---- MEDIA QUERIES PARA CELULARES ---- */
+@media screen and (max-width: 768px) {
+    main {
+        padding: 15px;
+    }
+
+    /* Adaptar la sección de bienvenida en celular */
+    .welcome-section {
+        flex-direction: column;  /* Cambia la disposición de lado a lado a en columna */
+        text-align: center;
+        padding: 20px;
+    }
+
+    .welcome-content {
+        text-align: center;
+    }
+
+    .welcome-image img {
+        width: 80%; /* Hacer la imagen más pequeña en móvil */
+    }
+
+    /* Ajustar la galería de productos en celular */
+    .products-container {
+        flex-direction: column; /* Los productos se muestran uno debajo del otro */
+        align-items: center;
+    }
+
+    .product-item {
+        width: 90%; /* Que ocupen casi toda la pantalla en móvil */
+    }
+}
+
